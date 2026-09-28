@@ -6,7 +6,7 @@ InvokerApp helps you manage Invoker's spells, customize hotkeys, and switch betw
 
 ## Download
 
-[**Download the Latest Version**](https://github.com/Melonw/InvokerApp/releases/latest)
+[**Download the Latest Version**](https://github.com/Melonvw/InvokerApp/releases/tag/v1.0.0)
 
 Download the ZIP file from the Assets section.
 
