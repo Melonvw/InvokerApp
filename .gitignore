@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+publish/
+artifacts/
+*.user
+settings.json
+invoker-debug.txt

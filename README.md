@@ -1,99 +1,46 @@
-# InvokerApp
+# InvokerApp 2
 
-A customizable Dota 2 Invoker overlay.
+**Version 2.0.0** is a Windows desktop app for managing Invoker spell layouts, the on-screen overlay, and custom spell combos.
 
-InvokerApp helps you manage Invoker's spells, customize hotkeys, and switch between multiple layouts.
+Version 2 builds on the original overlay app with a native WinForms Combo Studio, Combo Assistant, configurable combo hotkeys, and an Arcane Premium interface.
 
 ## Download
 
-[**Download the Latest Version**](https://github.com/Melonvw/InvokerApp/releases/tag/v1.0.0)
+Download the latest Windows build from [GitHub Releases](https://github.com/Melonvw/InvokerApp/releases/latest).
 
-Download the ZIP file from the Assets section.
+Extract the ZIP and run `InvokerApp.exe`. The framework-dependent build requires the **.NET 8 Desktop Runtime** for Windows.
 
-## Installation
-
-1. Download the latest release ZIP.
-2. Extract the ZIP file to a folder.
-3. Run `InvokerApp.exe`.
-4. Keep the application running while playing Dota 2.
+Your settings are stored in `settings.json` beside the application. Keep this file when upgrading if you want to preserve layouts, combos, themes, and hotkeys.
 
 ## Features
 
-- Customizable spell hotkeys
-- Multiple independent layouts
-- Switch between layouts using Caps Lock
-- Drag and drop spell ordering
-- In-game overlay
-- Edit mode for customizing the overlay
-- Click-through mode for interacting with the game
+- Starts in Combo Studio Home, with an explicit switch to Overlay mode.
+- Three independently configurable spell layouts; press `Caps Lock` to cycle layouts.
+- Edit spell hotkeys and reorder spell rows. Assigning a key already used by another spell swaps both bindings and rows.
+- Combo library and editor with shared or layout-specific combos, ordered spell sequences, and drag-and-drop reordering.
+- Combo Assistant with Manual and Automatic modes, progress, and Previous, Next, Pause, Resume, Reset, and Stop controls.
+- Configurable global shortcuts for starting, advancing, and resetting a combo.
+- Five themes, including Arcane Premium.
 
-## How to Use
+## Quick start
 
-### 1. Launching the App
+1. Launch `InvokerApp.exe`; Combo Studio opens on Home.
+2. Select **Switch to Overlay Mode** to show the overlay. Select **COMBO STUDIO** on the overlay to return.
+3. In Combo Studio, create and save a combo, then open Combo Assistant.
+4. Configure the Start, Next, and Reset shortcuts in Settings.
 
-Run `InvokerApp.exe` before or while playing Dota 2.
+For detailed setup and usage instructions, see the [Persian tutorial](./README_COMBO_BUILDER_FA.txt).
 
-Keep the application running while you play.
+## Build from source
 
-### 2. Edit Mode
+Requirements: Windows and the .NET 8 SDK.
 
-Press `F9` to toggle Edit Mode.
+```powershell
+dotnet build InvokerApp.csproj -c Release
+```
 
-In Edit Mode, you can customize the overlay and move spell rows by dragging them.
+The project is a C# .NET 8 Windows Forms application. Spell artwork and the supplied Arcane background are copied to the build output.
 
-Press `F9` again to exit Edit Mode.
+## Notes
 
-### 3. Mouse Click-Through
-
-Press `Insert` to toggle mouse click-through mode.
-
-- Click-through enabled: Mouse clicks pass through the overlay, allowing you to interact with Dota 2.
-- Click-through disabled: You can interact with the overlay.
-
-### 4. Switching Layouts
-
-Press `Caps Lock` to cycle through the three available layouts.
-
-Each layout has its own spell configuration and ordering.
-
-You can customize each layout independently.
-
-### 5. Customizing Spell Hotkeys
-
-Open the hotkey editor in the application to configure the keys assigned to spells.
-
-Assign your preferred keys and use them to activate the corresponding spell sequences.
-
-### 6. Reordering Spells
-
-Enter Edit Mode using `F9`.
-
-Drag and drop spells to change their order in the overlay.
-
-Your configuration is saved in `settings.json`.
-
-## Configuration
-
-The application stores its settings in `settings.json`.
-
-This includes your saved layouts and custom configurations.
-
-Keep the settings file if you want to preserve your configuration.
-
-## Troubleshooting
-
-**The overlay does not appear**
-
-- Make sure InvokerApp is running.
-- Make sure you are using the latest release.
-
-**My settings are missing**
-
-- Make sure `settings.json` is preserved.
-- Avoid deleting the application's configuration files.
-
-## Disclaimer
-
-InvokerApp is an independent community project and is not affiliated with or endorsed by Valve Corporation or Dota 2.
-
-Use the application at your own discretion.
+InvokerApp is an independent community project and is not affiliated with or endorsed by Valve Corporation or Dota 2. The application sends configured keystrokes to the currently active window; it cannot verify in-game results.
